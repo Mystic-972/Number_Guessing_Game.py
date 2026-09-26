@@ -57,15 +57,14 @@ def play_game():
             end_time = time.time()
             elapsed = round(end_time - start_time, 2)
 
-            print("\n🎉 Congratulations!")
+            print("\nCongratulations!")
             print(f"You guessed the correct number in {attempts} attempts.")
             print(f"Time taken: {elapsed} seconds.")
 
-            # Update High Score
             if (high_scores[difficulty] is None or
                     attempts < high_scores[difficulty]):
                 high_scores[difficulty] = attempts
-                print("🏆 New High Score!")
+                print("New High Score!")
 
             return
 
@@ -74,7 +73,6 @@ def play_game():
         else:
             print("Incorrect! The number is greater than", guess)
 
-        # Hint System
         remaining = chances - attempts
 
         if remaining == 1:
@@ -111,7 +109,7 @@ def main():
         again = input("\nDo you want to play again? (y/n): ").lower()
 
         if again != "y":
-            print("\nThanks for playing! 👋")
+            print("\nThanks for playing! ")
             break
 
 
